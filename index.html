@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            Hello Angular
+        </title>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+        <script src="script.js"></script>
+    
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="MainController">
+            <div>
+                <h1>{{message}}</h1>
+            </div>
+            <div>
+                <div>
+                    Nome: {{person.nome}}<br>
+                    Sobrenome: {{person.sobrenome}}<br>
+                    Idade: {{person.idade}}<br>
+                    <div>
+                        <img ng-src="{{person.foto}}"
+                            title="{{person.nome}} {{person.sobrenome}}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
