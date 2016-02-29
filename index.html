@@ -3,10 +3,9 @@
         <title>
             Hello Angular
         </title>
-        
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
         <script src="script.js"></script>
-    
+        <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body ng-app="myApp">
         <div ng-controller="MainController">
@@ -25,5 +24,21 @@
                 </div>
             </div>
         </div>
+        <br>
+
+        
+        <div ng-controller="HttpController">
+            <div class="errorMessage">
+                {{errorMessage}}
+            </div>
+            <form name="searchGitUser" ng-submit="buscar(username)">
+                <input type="search" required placeholder="user name to find" ng-model="username" />
+                <input type="submit" value="Buscar" />
+            </form>
+            
+            <div ng-include="'UserDetails.html'" ng-show="user">
+            </div>
+         </div>   
+            
     </body>
 </html>
